@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Apotek Irfan') }}</title>
+    <title>{{ config('app.name', 'Apotek JUJU') }}</title>
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600,700&display=swap" rel="stylesheet" />
@@ -61,7 +61,7 @@
             <div class="max-w-7xl mx-auto px-4">
                 <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                     <div class="text-sm text-slate-500 dark:text-slate-400">
-                        &copy; {{ date('Y') }} <span class="font-bold text-indigo-600">Apotek Irfan</span>. Politeknik LP3I Tasikmalaya.
+                        &copy; {{ date('Y') }} <span class="font-bold text-indigo-600">Apotek JUJU</span>. Politeknik LP3I Tasikmalaya.
                     </div>
                     <div class="flex space-x-6 text-slate-400">
                         <i class="fab fa-laravel hover:text-red-500 transition-colors"></i>

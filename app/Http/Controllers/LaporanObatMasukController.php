@@ -40,7 +40,7 @@ class LaporanObatMasukController extends Controller
      */
     public function export()
     {
-        // Nama file Excel profesional untuk Apotek Irfan
-        return Excel::download(new ObatMasukExport, 'laporan_pembelian_obat_irfan.xlsx');
+        // Nama file Excel profesional untuk Apotek JUJU
+        return Excel::download(new ObatMasukExport, 'laporan_pembelian_obat_JUJU.xlsx');
     }
 }

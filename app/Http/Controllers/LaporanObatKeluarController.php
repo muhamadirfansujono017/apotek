@@ -35,6 +35,6 @@ class LaporanObatKeluarController extends Controller
      */
     public function export()
     {
-        return Excel::download(new ObatKeluarExport, 'laporan_penjualan_obat_irfan.xlsx');
+        return Excel::download(new ObatKeluarExport, 'laporan_penjualan_obat_JUJU.xlsx');
     }
 }

@@ -4,7 +4,7 @@
             <div class="p-10 border-b border-dashed border-gray-200 text-center md:text-left">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div>
-                        <h1 class="text-4xl font-black text-indigo-600 italic">APOTEK IRFAN</h1>
+                        <h1 class="text-4xl font-black text-indigo-600 italic">APOTEK JUJU</h1>
                         <p class="text-gray-400 text-sm">Jl. Cilolohan No. 81, Tasikmalaya</p>
                     </div>
                     <div class="text-right">

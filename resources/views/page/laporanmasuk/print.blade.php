@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cetak Laporan Barang Masuk - Apotek Irfan</title>
+    <title>Cetak Laporan Barang Masuk - Apotek JUJU</title>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
@@ -77,9 +77,9 @@
 <body>
 
     <div class="header-kop">
-        <h1>APOTEK IRFAN</h1>
+        <h1>APOTEK JUJU</h1>
         <p>Jl. Cilolohan No. 81, Tasikmalaya, Jawa Barat</p>
-        <p>Telp: (0265) 123456 | Email: apotekirfan@gmail.com</p>
+        <p>Telp: (0265) 123456 | Email: apotekJUJU@gmail.com</p>
     </div>
 
     <h2>Laporan Barang Masuk</h2>

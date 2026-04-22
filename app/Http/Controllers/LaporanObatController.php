@@ -28,7 +28,7 @@ class LaporanObatController extends Controller
      */
     public function export()
     {
-        return Excel::download(new ObatExport, 'laporan_stok_obat_irfan.xlsx');
+        return Excel::download(new ObatExport, 'laporan_stok_obat_JUJU.xlsx');
     }
 
     /**

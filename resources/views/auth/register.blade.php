@@ -1,78 +1,82 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+    <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-cyan-50 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950 px-4 py-12">
+        <div class="w-full max-w-lg">
+            
+            <div class="text-center mb-8">
+                <div class="inline-flex p-4 rounded-[1.5rem] bg-indigo-600 shadow-xl shadow-indigo-200 dark:shadow-none mb-4">
+                    <i class="fas fa-user-plus text-2xl text-white"></i>
+                </div>
+                <h1 class="text-3xl font-black text-gray-900 dark:text-white tracking-tighter uppercase italic">
+                    Daftar <span class="text-indigo-600">Akun</span>
+                </h1>
+                <p class="text-gray-500 dark:text-gray-400 mt-2 font-semibold">Buat akses baru untuk Sistem Apotek JUJU</p>
+            </div>
 
-        <!-- Name -->
-        <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required
-                autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            <div class="bg-white/70 dark:bg-gray-900/80 backdrop-blur-2xl p-8 rounded-[2.5rem] shadow-2xl border border-white dark:border-gray-800">
+                
+                <form method="POST" action="{{ route('register') }}" class="space-y-5">
+                    @csrf
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Nama Lengkap</label>
+                            <input type="text" name="name" :value="old('name')" required autofocus autocomplete="name"
+                                class="w-full px-5 py-3 bg-gray-50/50 dark:bg-gray-800 border-none rounded-xl focus:ring-2 focus:ring-indigo-600 transition-all text-gray-900 dark:text-white" 
+                                placeholder="Nama Anda">
+                            <x-input-error :messages="$errors->get('name')" class="mt-1" />
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Email</label>
+                            <input type="email" name="email" :value="old('email')" required autocomplete="username"
+                                class="w-full px-5 py-3 bg-gray-50/50 dark:bg-gray-800 border-none rounded-xl focus:ring-2 focus:ring-indigo-600 transition-all text-gray-900 dark:text-white" 
+                                placeholder="email@apotek.com">
+                            <x-input-error :messages="$errors->get('email')" class="mt-1" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Password</label>
+                            <input type="password" name="password" required autocomplete="new-password"
+                                class="w-full px-5 py-3 bg-gray-50/50 dark:bg-gray-800 border-none rounded-xl focus:ring-2 focus:ring-indigo-600 transition-all text-gray-900 dark:text-white" 
+                                placeholder="••••••••">
+                            <x-input-error :messages="$errors->get('password')" class="mt-1" />
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Konfirmasi</label>
+                            <input type="password" name="password_confirmation" required autocomplete="new-password"
+                                class="w-full px-5 py-3 bg-gray-50/50 dark:bg-gray-800 border-none rounded-xl focus:ring-2 focus:ring-indigo-600 transition-all text-gray-900 dark:text-white" 
+                                placeholder="••••••••">
+                            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-1" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-1">Role Akses</label>
+                        <select name="role" id="role" required
+                            class="w-full px-5 py-3 bg-gray-50/50 dark:bg-gray-800 border-none rounded-xl focus:ring-2 focus:ring-indigo-600 transition-all text-gray-900 dark:text-white appearance-none cursor-pointer">
+                            <option value="" disabled selected>Pilih Role...</option>
+                            <option value="A">ADMIN</option>
+                            <option value="U">USER</option>
+                        </select>
+                        <x-input-error :messages="$errors->get('role')" class="mt-1" />
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-black py-4 rounded-2xl shadow-lg shadow-indigo-200 dark:shadow-none transition-all active:scale-[0.98] uppercase tracking-widest text-xs">
+                            Daftarkan Sekarang
+                        </button>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <a class="text-xs font-bold text-gray-500 hover:text-indigo-600 transition-colors uppercase tracking-tighter" href="{{ route('login') }}">
+                            Sudah punya akun? <span class="underline">Login di sini</span>
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
-                required autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="mb-5 mt-4">
-            <label for="role" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Role</label>
-            <select name="role" id="role"
-                class="w-full border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:text-white"
-                required>
-                <option value="">Pilih...</option>
-                <option value="A">ADMIN</option>
-                <option value="U">USER</option>
-            </select>
-        </div>
-
-        {{-- Jika outlet diaktifkan --}}
-        {{--
-<div class="mb-5 mt-4">
-    <label for="id_outlet" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Outlet</label>
-    <select name="id_outlet" id="id_outlet"
-        class="w-full border border-gray-300 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:text-white">
-        <option value="">Pilih...</option>
-        @foreach ($outlet as $o)
-            <option value="{{ $o->id }}">{{ $o->nama }}</option>
-        @endforeach
-    </select>
-</div>
---}}
-
-
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
-                href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-
-            <x-primary-button class="ms-4">
-                {{ __('Register') }}
-            </x-primary-button>
-        </div>
-    </form>
+    </div>
 </x-guest-layout>

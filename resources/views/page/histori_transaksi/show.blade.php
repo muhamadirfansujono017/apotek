@@ -16,7 +16,7 @@
             <div class="p-10 border-b border-dashed border-gray-200 dark:border-gray-700">
                 <div class="flex justify-between">
                     <div>
-                        <h1 class="text-4xl font-black text-indigo-600 italic">APOTEK IRFAN</h1>
+                        <h1 class="text-4xl font-black text-indigo-600 italic">APOTEK JUJU</h1>
                         <p class="text-gray-500 text-sm">Jl. Cilolohan No. 81, Tasikmalaya</p>
                     </div>
                     <div class="text-right uppercase">

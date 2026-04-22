@@ -39,6 +39,7 @@ Route::middleware('auth')->group(function () {
     // Fitur Histori Transaksi (Tampilan Tab & Detail Struk)
     Route::get('/histori-transaksi', [Histori_TransaksiController::class, 'index'])->name('transaksi.index');
     Route::get('/histori-transaksi/{id}', [Histori_TransaksiController::class, 'show'])->name('transaksi.show');
+    Route::resource('histori_transaksi', Histori_TransaksiController::class);
 
     // Bagian Riwayat Stok
     Route::resource('stok_log', StokLogController::class);

@@ -29,7 +29,7 @@
             class="bg-white dark:bg-gray-800 shadow-sm rounded-2xl border border-gray-100 dark:border-gray-700 overflow-hidden">
             <div class="p-6 border-b border-gray-50 dark:border-gray-700">
                 <h3 class="text-lg font-bold text-gray-800 dark:text-white">Daftar Rekanan</h3>
-                <p class="text-sm text-gray-500">Kelola informasi seluruh penyedia stok obat Apotek Irfan.</p>
+                <p class="text-sm text-gray-500">Kelola informasi seluruh penyedia stok obat Apotek JUJU.</p>
             </div>
 
             <div class="overflow-x-auto">
