@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between">
             <h2 class="text-2xl font-bold text-gray-800 dark:text-white leading-tight flex items-center">
                 <i class="fas fa-truck-moving me-3 text-indigo-600"></i>
-                {{ __('Data Supplier') }}
+                {{ __('Tabel Supplier') }}
             </h2>
             <a href="{{ route('supplier.create') }}"
                 class="inline-flex items-center bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg shadow-indigo-100 transition-all duration-200 transform hover:-translate-y-0.5">

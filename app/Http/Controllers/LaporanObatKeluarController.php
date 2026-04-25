@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Penjualan;
 use App\Exports\ObatKeluarExport;
+use App\Models\DetailPenjualan;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -14,12 +15,12 @@ class LaporanObatKeluarController extends Controller
      */
     public function index()
     {
-        // Gunakan 'detailPenjualan.obat' sesuai nama fungsi di Model kamu
+        // Gunakan paginate sesuai yang ada di Blade kamu
         $barangKeluar = Penjualan::with(['user', 'detailPenjualan.obat'])
-            ->orderBy('created_at', 'desc')
+            ->latest()
             ->paginate(10);
 
-        return view('page.laporankeluar.index', compact('barangKeluar'));
+        return view('page.laporanKeluar.index', compact('barangKeluar'));
     }
 
     public function print()

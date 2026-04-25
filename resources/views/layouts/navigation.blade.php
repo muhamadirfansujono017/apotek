@@ -44,10 +44,9 @@
                                 </x-slot>
                                 <x-slot name="content">
                                     <div class="px-4 py-2 text-xs text-gray-400 font-bold uppercase tracking-wider">Arus Barang</div>
-                                    <x-dropdown-link :href="route('pembelian.index')">📥 Pembelian(Kasir)</x-dropdown-link>
-                                    <x-dropdown-link :href="route('penjualan.index')">📤 penjualan (Kasir)</x-dropdown-link>
+                                    <x-dropdown-link :href="route('pembelian.index')">📥 Pembelian</x-dropdown-link>
+                                    <x-dropdown-link :href="route('penjualan.index')">📤 penjualan</x-dropdown-link>
                                     <div class="border-t border-gray-100"></div>
-                                    <x-dropdown-link :href="route('transaksi.index')">📋 Histori Transaksi</x-dropdown-link>
                                 </x-slot>
                             </x-dropdown>
                         </div>
@@ -64,6 +63,7 @@
                                 </x-slot>
                                 <x-slot name="content">
                                     <x-dropdown-link :href="route('stok_log.index')">📦 Stok & Kadaluarsa</x-dropdown-link>
+                                    <x-dropdown-link :href="route('laporan.obat.index')">📈 Laporan obat</x-dropdown-link>
                                     <x-dropdown-link :href="route('laporan.masuk.index')">📈 Laporan Pembelian</x-dropdown-link>
                                     <x-dropdown-link :href="route('laporan.keluar.index')">📉 Laporan Penjualan</x-dropdown-link>
                                 </x-slot>

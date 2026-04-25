@@ -14,13 +14,15 @@ class LaporanObatController extends Controller
      */
     public function index(Request $request)
     {
-        // Menggunakan paginate agar tampilan tabel tetap rapi (elegant)
-        $barangs = Obat::paginate(10);
-        
-        // Menghitung total seluruh stok obat
-        $totalStok = Obat::sum('stok');
+        $query = Obat::query();
 
-        return view('page.laporan.index', compact('barangs', 'totalStok'));
+        // Filter berdasarkan rentang tanggal
+        if ($request->has('tgl_awal') && $request->has('tgl_akhir')) {
+            $query->whereBetween('created_at', [$request->tgl_awal . ' 00:00:00', $request->tgl_akhir . ' 23:59:59']);
+        }
+
+        $obat = $query->get();
+        return view('page.laporanObat.index', compact('obat'));
     }
 
     /**
@@ -34,9 +36,18 @@ class LaporanObatController extends Controller
     /**
      * Fungsi Print untuk cetak laporan (Tampilan khusus print)
      */
-    public function print()
+    public function print(Request $request)
     {
-        $barangs = Obat::all();
-        return view('page.laporan-masuk.print', compact('barangs'));
+        $query = Obat::query();
+
+        if ($request->tgl_awal && $request->tgl_akhir) {
+            $query->whereBetween('created_at', [$request->tgl_awal . ' 00:00:00', $request->tgl_akhir . ' 23:59:59']);
+        }
+
+        $obat = $query->get();
+        $tgl_awal = $request->tgl_awal;
+        $tgl_akhir = $request->tgl_akhir;
+
+        return view('page.laporanObat.print', compact('obat', 'tgl_awal', 'tgl_akhir'));
     }
 }

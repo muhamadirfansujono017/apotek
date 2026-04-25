@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between">
             <h2 class="font-bold text-2xl text-gray-800 dark:text-white leading-tight flex items-center">
                 <i class="fas fa-pills text-indigo-600 me-3"></i>
-                {{ __('Stok Obat Apotek JUJU') }}
+                {{ __('Tabel Obat/Stok') }}
             </h2>
             <a href="{{ route('obat.create') }}" 
                class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl font-semibold shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center text-sm">

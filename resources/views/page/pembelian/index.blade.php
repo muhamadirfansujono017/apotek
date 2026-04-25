@@ -2,7 +2,7 @@
     <x-slot name="header">
         <div class="flex justify-between items-center">
             <h2 class="font-bold text-2xl text-gray-800 dark:text-white flex items-center">
-                <i class="fas fa-truck-loading text-indigo-600 me-3"></i> Riwayat Pembelian (Stok Masuk)
+                <i class="fas fa-truck-loading text-indigo-600 me-3"></i> Tabel Pembelian
             </h2>
             <a href="{{ route('pembelian.create') }}" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-2xl text-sm font-bold shadow-lg shadow-indigo-100 transition transform active:scale-95">
                 <i class="fas fa-plus me-2"></i> Tambah Stok

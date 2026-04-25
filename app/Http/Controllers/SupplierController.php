@@ -34,8 +34,8 @@ class SupplierController extends Controller
     // --- PERBAIKAN DI SINI ---
     public function edit($id)
     {
-        $supplier = Supplier::findOrFail($id);
-        return view('page.supplier.edit', compact('supplier')); // Pastikan ke file .edit
+        $supplier = \App\Models\Supplier::findOrFail($id);
+    return view('page.supplier.edit', compact('supplier'));// Pastikan ke file .edit
     }
 
     // --- PERBAIKAN DI SINI ---

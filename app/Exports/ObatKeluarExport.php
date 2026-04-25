@@ -21,7 +21,7 @@ class ObatKeluarExport implements FromCollection, WithHeadings
                 'harga'     => $item->harga,
                 'subtotal'  => $item->subtotal,
                 'tanggal'   => $item->penjualan->tanggal ?? '-',
-                'kasir'     => $item->penjualan->user->name ?? '-', // Nama kasir yang melayani
+                'kasir'     => $item->penjualan->user->name ?? '-',
             ];
         });
     }

@@ -9,9 +9,11 @@ class ObatController extends Controller
 {
     public function index()
     {
-        $obat = Obat::latest()->paginate(10);
+        // MENGUBAH URUTAN: Menggunakan orderBy pada kolom kode_obat secara 'asc' (ascending)
+        // agar OBT-001 muncul paling atas, diikuti OBT-002, dst.
+        $obat = Obat::orderBy('kode_obat', 'asc')->paginate(10);
 
-        // Logika kode obat otomatis OBT-001
+        // Logika kode obat otomatis tetap sama
         $latestObat = Obat::orderBy('id', 'desc')->first();
         if (!$latestObat) {
             $latestKodeObat = 'OBT-001';
@@ -91,5 +93,17 @@ class ObatController extends Controller
         $obat = Obat::findOrFail($id);
         $obat->delete();
         return redirect()->route('obat.index')->with('success', 'Data obat berhasil dihapus!');
+    }
+
+    public function laporan()
+    {
+        $obat = Obat::all();
+        return view('page.laporanObat.index', compact('obat'));
+    }
+
+    public function laporanPrint()
+    {
+        $obat = Obat::all();
+        return view('page.laporanObat.print', compact('obat'));
     }
 }
