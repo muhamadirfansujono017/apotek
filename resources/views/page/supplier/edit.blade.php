@@ -11,7 +11,7 @@
             {{-- Header Visual --}}
             <div class="bg-amber-500 p-8 text-white">
                 <h3 class="text-lg font-black uppercase tracking-widest">Informasi Supplier</h3>
-                <p class="text-amber-100 text-sm">Pastikan data supplier Apotek Irfan diperbarui dengan benar.</p>
+                <p class="text-amber-100 text-sm">Pastikan data supplier Apotek JUJU diperbarui dengan benar.</p>
             </div>
 
             <form action="{{ route('supplier.update', $supplier->id) }}" method="POST" class="p-8">

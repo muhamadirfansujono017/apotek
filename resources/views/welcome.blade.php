@@ -158,7 +158,7 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-2 grayscale opacity-60">
                 <span class="text-xs font-black uppercase tracking-widest text-slate-500">
-                    &copy; 2026 Muhamad Irfan Sujono &bull; Politeknik LP3I Tasikmalaya
+                    &copy; 2026 Muhamad JUJU Sujono &bull; Politeknik LP3I Tasikmalaya
                 </span>
             </div>
             <div class="flex gap-6">

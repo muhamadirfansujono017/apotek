@@ -103,7 +103,7 @@
         {{-- Footer Branding --}}
         <div class="mt-12 text-center">
             <p class="text-[10px] font-black text-gray-300 uppercase tracking-[0.5em]">
-                &copy; 2026 Apotek Irfan. Politeknik LP3I Tasikmalaya.
+                &copy; 2026 Apotek JUJU. Politeknik LP3I Tasikmalaya.
             </p>
         </div>
     </div>

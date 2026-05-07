@@ -21,7 +21,7 @@
             <div class="p-10 border-b border-dashed border-gray-200 dark:border-gray-700">
                 <div class="flex flex-col md:flex-row justify-between items-start">
                     <div>
-                        <h1 class="text-4xl font-black text-indigo-600 italic uppercase tracking-tighter">APOTEK IRFAN
+                        <h1 class="text-4xl font-black text-indigo-600 italic uppercase tracking-tighter">APOTEK JUJU
                         </h1>
                         <p class="text-gray-400 text-sm font-bold">Jl. Cilolohan No. 81, Tasikmalaya</p>
 
@@ -141,7 +141,7 @@
         {{-- Footer Branding --}}
         <div class="mt-12 text-center print:hidden">
             <p class="text-[10px] font-black text-gray-300 uppercase tracking-[0.5em]">
-                &copy; 2026 Apotek Irfan. Politeknik LP3I Tasikmalaya.
+                &copy; 2026 Apotek JUJU. Politeknik LP3I Tasikmalaya.
             </p>
         </div>
     </div>
